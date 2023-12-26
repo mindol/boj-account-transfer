@@ -56,3 +56,17 @@ Automatically re-submit all submissions of previous BOJ account to the new BOJ a
   + submit(신규_쿠키, 소스코드, 문제번호) 수행. 새_제출번호 획득.
   + check_result(기존_제출번호, 새_제출번호)의 결과를 리스트에 append
 + 실패 정보 리스트를 출력.
+
+## 설계
+### 1. Language
+`Python 3.12`
+
+### 2. Library
++ BeautifulSoup : 웹 페이지 정보를 쉽게 스크랩할 수 있도록 도와준다
++ Requests : HTTP 요청을 보낼 수 있도록 도와준다
+
+### 3. Timeline
++ ~2023.01.01 : 개발 준비, interaction 형식 및 라이브러리 탐색
++ ~2023.01.31 : login과 search 구현
++ ~2023.02.28 : submit 까지 구현
++ ~2023.03.31 : main 구현 후 마무리

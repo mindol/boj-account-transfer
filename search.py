@@ -51,12 +51,13 @@ class Search:
                 submission_id = int(elems[0].text)
                 problem_id = int(elems[2].text)
                 result = elems[3].text
+                language = elems[6].text
                 
                 if submission_id < start:
                     finished = True
                     break
                     
-                found.append({"submission_id": submission_id, "problem_id": problem_id, "result": result})
+                found.append({"submission_id": submission_id, "problem_id": problem_id, "result": result, "langauge": language})
             
             history += found
             print("found: {}~{}({} submissions), now total: {} submissions".format(
@@ -72,7 +73,7 @@ class Search:
         return history
         
 
-# searchEngine = Search()
-# history = searchEngine.load_from_web("povwhm", 0, 0)
-# searchEngine.save_to_file(history)
-# history = searchEngine.load_from_file()
+searchEngine = Search()
+history = searchEngine.load_from_web("povwhm", 0, 0)
+searchEngine.save_to_file(history)
+history = searchEngine.load_from_file()

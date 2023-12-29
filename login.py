@@ -5,8 +5,13 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 class Login:
-    def __init__(self, detach = False):
-        self.driver = webdriver.Chrome()
+    def __init__(self, headless = False):
+        if headless:
+            options = webdriver.ChromeOptions()
+            options.add_argument("headless")
+            self.driver = webdriver.Chrome(options = options)
+        else:
+            self.driver = webdriver.Chrome()
         self.wait10 = WebDriverWait(self.driver, 10)
 
     def login(self, user_id, password):

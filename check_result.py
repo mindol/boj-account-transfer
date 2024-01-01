@@ -1,7 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 class Check_Result:
     def __init__(self, headless = False):
@@ -11,10 +9,13 @@ class Check_Result:
             self.driver = webdriver.Chrome(options = options)
         else:
             self.driver = webdriver.Chrome()
-        self.wait10 = WebDriverWait(self.driver, 10)
         self.status_url = "https://www.acmicpc.net/status?top="
 
     def get_result(self, submission_id):
+        """
+        Returns (problem_id, result) for given submission id.
+        Do not call this function outside.
+        """
         desired_url = self.status_url + submission_id
         self.driver.get(desired_url)
 
@@ -36,6 +37,11 @@ class Check_Result:
         return (problem_id, result)
 
     def check_result(self, old_submission_id, new_submission_id):
+        """
+        Checks if the results of two submission ids are equivalent.
+        will return True if they are the same,
+        or it will return information about incorrect submission results.
+        """
         (old_problem_number, old_result) = self.get_result(old_submission_id)
         (new_problem_number, new_result) = self.get_result(new_submission_id)
 
@@ -48,8 +54,10 @@ class Check_Result:
             return "Incorrect submission result for Problem {} : Expected {}, but got {}".format(
                 old_problem_number, old_result, new_result)
 
+"""
 checkEngine = Check_Result()
 old_id = input("Old Submission ID: ")
 new_id = input("New Submission ID: ")
 result = checkEngine.check_result(old_id, new_id)
 print(result)
+"""

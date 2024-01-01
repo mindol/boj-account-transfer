@@ -60,6 +60,7 @@ Automatically re-submit submission history of previous BOJ account to the new BO
 `Python 3.12`
 
 ### 2. Library
++ Selenium : 동적인 웹 페이지 상호작용을 도와준다
 + BeautifulSoup : 웹 페이지 정보를 쉽게 스크랩할 수 있도록 도와준다
 + Requests : HTTP 요청을 보낼 수 있도록 도와준다
 

@@ -14,20 +14,36 @@ class Submit:
         """Only used when language is not found in the drop list
         """
         
+    def fetch_language_ids(self, login_cookie):
+        language_setting_url = "https://www.acmicpc.net/setting/language"
+        self.driver.get(language_setting_url)
+        if self.login_cookie != login_cookie:
+            self.login_cookie = login_cookie
+            self.driver.add_cookie(login_cookie)
+            self.driver.get(language_setting_url) # retry loading the page with the cookie
+        show_languages = self.driver.find_element(By.ID, "show_languages")
+        l1 = show_languages.find_elements(By.CLASS_NAME, "list-group-item")
+        hide_languages = self.driver.find_element(By.ID, "hide_languages")
+        l2 = hide_languages.find_elements(By.CLASS_NAME, "list-group-item")
+        self.all_languages = l1 + l2
+        
+    def fetch_source_code_open_policy(self, login_cookie):
+        # open, close, onlyaccepted
+        source_setting_url = "https://www.acmicpc.net/setting/solution"
+        self.driver.get(source_setting_url)
+        if self.login_cookie != login_cookie:
+            self.login_cookie = login_cookie
+            self.driver.add_cookie(login_cookie)
+            self.driver.get(source_setting_url) # retry loading the page with the cookie
+        radio = self.driver.find_elements(By.NAME, "code_open")
+        for v in radio:
+            if v.is_selected:
+                self.code_open = v.get_attribute("value")
+        
     def submit(self, login_cookie, language, source_code, problem_id):
         # [Step 1-0] Fetch language id list if not yet fetched
         if self.all_languages == None:
-            language_setting_url = "https://www.acmicpc.net/setting/language"
-            self.driver.get(language_setting_url)
-            if self.login_cookie != login_cookie:
-                self.login_cookie = login_cookie
-                self.driver.add_cookie(login_cookie)
-                self.driver.get(language_setting_url) # retry loading the page with the cookie
-            show_languages = self.driver.find_element(By.ID, "show_languages")
-            l1 = show_languages.find_elements(By.CLASS_NAME, "list-group-item")
-            hide_languages = self.driver.find_element(By.ID, "hide_languages")
-            l2 = hide_languages.find_elements(By.CLASS_NAME, "list-group-item")
-            self.all_languages = l1 + l2
+            self.fetch_language_ids(login_cookie)
             
         # [Step 1-1] Find language id
         for lang in self.all_languages:
@@ -39,23 +55,15 @@ class Submit:
         if not found:
             return "Language Not Found"
             
-        # [Step 1-2] Fetch source code open policy if not yet fetched
+        # [Step 1-2] Fetch new account's source code open policy if not yet fetched
         if self.code_open == None:
-            source_setting_url = "https://www.acmicpc.net/setting/solution"
-            self.driver.get(source_setting_url)
-            if self.login_cookie != login_cookie:
-                self.login_cookie = login_cookie
-                self.driver.add_cookie(login_cookie)
-                self.driver.get(source_setting_url) # retry loading the page with the cookie
-            radio = self.driver.find_elements(By.NAME, "code_open")
-            for v in radio:
-                if v.is_selected:
-                    self.code_open = v.get_attribute("value")
+            self.fetch_source_code_open_policy(login_cookie)
                     
-        # [Step 2-0] Select language
+        # [Step 2-1] Select language
         
+        # [Step 2-2] Select souce code open policy
         
-        # [Step 2-1] Write source code
+        # [Step 2-3] Write source code
         
         
         return "submitted to problem id: {}".format(problem_id)

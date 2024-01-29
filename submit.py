@@ -1,6 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver import ActionChains, Keys
+import pyperclip
 import time
 
 class Submit:
@@ -27,7 +29,11 @@ class Submit:
         l1 = show_languages.find_elements(By.CLASS_NAME, "list-group-item")
         hide_languages = self.driver.find_element(By.ID, "hide_languages")
         l2 = hide_languages.find_elements(By.CLASS_NAME, "list-group-item")
-        self.all_languages = l1 + l2
+        l = l1 + l2
+        
+        self.all_languages = []
+        for lang in l:
+            self.all_languages.append({'name': lang.text, 'id': lang.get_attribute("data-language-id")})
         
     def fetch_source_code_open_policy(self, login_cookie):
         # open, close, onlyaccepted
@@ -49,9 +55,9 @@ class Submit:
             
         # [Step 1-1] Find language id
         for lang in self.all_languages:
-            if lang.text == language:
+            if lang['name'] == language:
                 found = True
-                language_id = lang.get_attribute("data-language-id")
+                language_id = lang['id']
                 print("found language_id:", language_id)
                 break
         if not found:
@@ -90,14 +96,18 @@ class Submit:
                 v.click()
         
         # [Step 2-3] Write source code
-        # [참고: https://steins-gate.tistory.com/entry/%EB%B0%B1%EC%A4%80-%EC%9E%90%EB%8F%99-%EC%A0%9C%EC%B6%9C-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8]
+        # [참고: https://steins-gate.tistory.com/entry/%EB%B0%B1%EC%A4%80-%EC%9E%90%EB%8F%99-%EC%A0%9C%EC%B6%9C-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8]        
         cm = self.driver.find_element(By.CLASS_NAME, "CodeMirror")
         cm.find_elements(By.CLASS_NAME, "CodeMirror-line")[0].click()
         textarea = cm.find_element(By.CSS_SELECTOR, "textarea")
-        textarea.send_keys(source_code)
+        pyperclip.copy(source_code)
+        actions = ActionChains(self.driver)
+        actions.key_down(Keys.CONTROL).send_keys('v').key_up(Keys.CONTROL).perform()
         
+        # [Step 2-4] Click submit button
+        self.driver.find_element(By.ID, "submit_button").click()
         
-        time.sleep(10)
+        time.sleep(5)
         return "submitted to problem id: {}".format(problem_id)
     
     def get_result(self, submission_id):
@@ -107,12 +117,12 @@ class Submit:
         pass
 
 
-from login import Login
-from getpass import getpass
-loginObject = Login()
-user_id = input("Input id: ")
-password = getpass("Input password: ")
-login_cookie = loginObject.login(user_id, password)
+# from login import Login
+# from getpass import getpass
+# loginObject = Login()
+# user_id = input("Input id: ")
+# password = getpass("Input password: ")
+# login_cookie = loginObject.login(user_id, password)
 
 hello_world_src = '''#include <cstdio>
 int main()
@@ -122,6 +132,16 @@ int main()
 }
 '''
 
-submitEngine = Submit()
-res = submitEngine.submit(login_cookie, 'Ruby', hello_world_src, 1001)
-print(str(res))
+test_src = '''#include <cstdio>
+int main()
+{
+    // TEST!
+    return 0;
+}
+'''
+
+# submitEngine = Submit()
+# res = submitEngine.submit(login_cookie, 'Ruby', hello_world_src, 1001)
+# print(str(res))
+# res = submitEngine.submit(login_cookie, 'OCaml', test_src, 1004)
+# print(str(res))

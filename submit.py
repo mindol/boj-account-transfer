@@ -6,25 +6,23 @@ import pyperclip
 import time
 
 class Submit:
-    def __init__(self):
+    def __init__(self, login_cookie):
         options = webdriver.ChromeOptions()
         # options.add_argument("headless")
         self.driver = webdriver.Chrome(options = options)
-        self.login_cookie = None
-        self.all_languages = None
-        self.code_open = None
+        self.login_cookie = login_cookie
+        self.fetch_language_ids()
+        self.fetch_source_code_open_policy()
         
     def lang_to_value__(language):
         """Only used when language is not found in the drop list
         """
         
-    def fetch_language_ids(self, login_cookie):
+    def fetch_language_ids(self):
         language_setting_url = "https://www.acmicpc.net/setting/language"
         self.driver.get(language_setting_url)
-        if self.login_cookie != login_cookie:
-            self.login_cookie = login_cookie
-            self.driver.add_cookie(login_cookie)
-            self.driver.get(language_setting_url) # retry loading the page with the cookie
+        self.driver.add_cookie(self.login_cookie)
+        self.driver.get(language_setting_url) # retry loading the page with the cookie
         show_languages = self.driver.find_element(By.ID, "show_languages")
         l1 = show_languages.find_elements(By.CLASS_NAME, "list-group-item")
         hide_languages = self.driver.find_element(By.ID, "hide_languages")
@@ -35,24 +33,16 @@ class Submit:
         for lang in l:
             self.all_languages.append({'name': lang.text, 'id': lang.get_attribute("data-language-id")})
         
-    def fetch_source_code_open_policy(self, login_cookie):
+    def fetch_source_code_open_policy(self):
         # open, close, onlyaccepted
         source_setting_url = "https://www.acmicpc.net/setting/solution"
         self.driver.get(source_setting_url)
-        if self.login_cookie != login_cookie:
-            self.login_cookie = login_cookie
-            self.driver.add_cookie(login_cookie)
-            self.driver.get(source_setting_url) # retry loading the page with the cookie
         radio = self.driver.find_elements(By.NAME, "code_open")
         for v in radio:
             if v.is_selected:
                 self.code_open = v.get_attribute("value")
         
-    def submit(self, login_cookie, language, source_code, problem_id):
-        # [Step 1-0] Fetch language id list if not yet fetched
-        if self.all_languages == None:
-            self.fetch_language_ids(login_cookie)
-            
+    def submit(self, language, source_code, problem_id, code_open = None):
         # [Step 1-1] Find language id
         for lang in self.all_languages:
             if lang['name'] == language:
@@ -62,19 +52,10 @@ class Submit:
                 break
         if not found:
             return "Language Not Found"
-            
-        # [Step 1-2] Fetch new account's source code open policy if not yet fetched
-        if self.code_open == None:
-            self.fetch_source_code_open_policy(login_cookie)
-
 
         # [Step 2-0] Open submit url
         submit_url = "https://www.acmicpc.net/submit/" + str(problem_id)
         self.driver.get(submit_url)
-        if self.login_cookie != login_cookie:
-            self.login_cookie = login_cookie
-            self.driver.add_cookie(login_cookie)
-            self.driver.get(submit_url) # retry loading the page with the cookie
 
         # [Step 2-1] Select language
         select = Select(self.driver.find_element(By.ID, "language"))
@@ -90,9 +71,10 @@ class Submit:
             select.select_by_value(language_id)
 
         # [Step 2-2] Select source code open policy
+        policy = self.code_open if code_open == None else code_open
         radio = self.driver.find_elements(By.NAME, "code_open")
         for v in radio:
-            if v.get_attribute("value") == self.code_open:
+            if v.get_attribute("value") == policy:
                 v.click()
         
         # [Step 2-3] Write source code
@@ -140,8 +122,8 @@ int main()
 }
 '''
 
-# submitEngine = Submit()
-# res = submitEngine.submit(login_cookie, 'Ruby', hello_world_src, 1001)
+# submitEngine = Submit(login_cookie)
+# res = submitEngine.submit('Ruby', hello_world_src, 1001)
 # print(str(res))
-# res = submitEngine.submit(login_cookie, 'OCaml', test_src, 1004)
+# res = submitEngine.submit('OCaml', test_src, 1004)
 # print(str(res))

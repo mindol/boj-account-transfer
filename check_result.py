@@ -36,12 +36,12 @@ class Check_Result:
         assert(submission_id == submission_wid)
 
         problem_id = int(elems[2].text)
-        wait120 = WebDriverWait(self.driver, 120)
+        wait300 = WebDriverWait(self.driver, 300)
         result_locator = (By.XPATH, '//tr[@id="solution-{}"]//td[@class="result"]//span'.format(submission_id))
         cond1 = EC.text_to_be_present_in_element(result_locator, '기다리는 중')
         cond2 = EC.text_to_be_present_in_element(result_locator, '채점 준비 중')
         cond3 = EC.text_to_be_present_in_element(result_locator, '채점 중')
-        wait120.until(EC.none_of(cond1, cond2, cond3))
+        wait300.until(EC.none_of(cond1, cond2, cond3))
         result = elems[3].text
         return (problem_id, result)
 

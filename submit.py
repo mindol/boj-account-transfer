@@ -1,5 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
+import time
 
 class Submit:
     def __init__(self):
@@ -58,14 +60,44 @@ class Submit:
         # [Step 1-2] Fetch new account's source code open policy if not yet fetched
         if self.code_open == None:
             self.fetch_source_code_open_policy(login_cookie)
-                    
+
+
+        # [Step 2-0] Open submit url
+        submit_url = "https://www.acmicpc.net/submit/" + str(problem_id)
+        self.driver.get(submit_url)
+        if self.login_cookie != login_cookie:
+            self.login_cookie = login_cookie
+            self.driver.add_cookie(login_cookie)
+            self.driver.get(submit_url) # retry loading the page with the cookie
+
         # [Step 2-1] Select language
-        
-        # [Step 2-2] Select souce code open policy
+        select = Select(self.driver.find_element(By.ID, "language"))
+        self.driver.execute_script("""document.getElementById('language').style.display='block';""")
+        try:
+            a = 2 / 0
+            select.select_by_value(language_id)
+        except:
+            add_option_script = """
+                document.getElementById('language').innerHTML+='<option value="{}" selected>{}</option>';
+            """.format(language_id, language)
+            self.driver.execute_script(add_option_script)
+            select.select_by_value(language_id)
+
+        # [Step 2-2] Select source code open policy
+        radio = self.driver.find_elements(By.NAME, "code_open")
+        for v in radio:
+            if v.get_attribute("value") == self.code_open:
+                v.click()
         
         # [Step 2-3] Write source code
+        # [참고: https://steins-gate.tistory.com/entry/%EB%B0%B1%EC%A4%80-%EC%9E%90%EB%8F%99-%EC%A0%9C%EC%B6%9C-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8]
+        cm = self.driver.find_element(By.CLASS_NAME, "CodeMirror")
+        cm.find_elements(By.CLASS_NAME, "CodeMirror-line")[0].click()
+        textarea = cm.find_element(By.CSS_SELECTOR, "textarea")
+        textarea.send_keys(source_code)
         
         
+        time.sleep(10)
         return "submitted to problem id: {}".format(problem_id)
     
     def get_result(self, submission_id):

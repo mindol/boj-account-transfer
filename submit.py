@@ -2,6 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver import ActionChains, Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import pyperclip
 import time
 
@@ -51,7 +53,7 @@ class Submit:
                 print("found language_id:", language_id)
                 break
         if not found:
-            return "Language Not Found"
+            raise Exception("Language Not Found")
 
         # [Step 2-0] Open submit url
         submit_url = "https://www.acmicpc.net/submit/" + str(problem_id)
@@ -86,10 +88,19 @@ class Submit:
         actions = ActionChains(self.driver)
         actions.key_down(Keys.CONTROL).send_keys('v').key_up(Keys.CONTROL).perform()
         
-        # [Step 2-4] Click submit button
+        # [Step 2-4] Click submit button and get new submission id
         self.driver.find_element(By.ID, "submit_button").click()
+        ec_status_page = EC.title_is("채점 현황")
+        wait60 = WebDriverWait(self.driver, 60)
+        wait60.until(ec_status_page)
+        table = self.driver.find_element(By.ID, "status-table")
+        tbody = table.find_element(By.TAG_NAME, "tbody")
+        entries = tbody.find_elements(By.TAG_NAME, "tr")
+        entry = entries[0]
+        elems = entry.find_elements(By.TAG_NAME, "td")
+        submission_id = int(elems[0].text)
         
-        return "submitted to problem id: {}".format(problem_id)
+        return submission_id, "submitted to problem id: {}".format(problem_id)
     
     def get_result(self, submission_id):
         pass

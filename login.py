@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class Login:
-    def __init__(self, headless = False):
+    def __init__(self, headless = True):
         if headless:
             options = webdriver.ChromeOptions()
             options.add_argument("headless")
@@ -12,6 +12,7 @@ class Login:
         else:
             self.driver = webdriver.Chrome()
         self.wait10 = WebDriverWait(self.driver, 10)
+        self.wait100 = WebDriverWait(self.driver, 100)
 
     def login(self, user_id, password):
         self.driver.delete_all_cookies()
@@ -27,9 +28,26 @@ class Login:
         
         login_btn = self.driver.find_element(By.ID, "submit_button")
         login_btn.click()
-        self.wait10.until(EC.title_is("Baekjoon Online Judge"))
-        if self.driver.title != "Baekjoon Online Judge":
-            raise Exception("login failed")
+        
+        ec_bot_detection = EC.element_to_be_clickable((By.XPATH, "/html/body/div[4]"))
+        ec_login_succeed = EC.title_is("Baekjoon Online Judge")
+        ec_login_failed = EC.text_to_be_present_in_element((By.CLASS_NAME, "color-red"),\
+            "아이디 / 이메일 또는 비밀번호가 잘못되었습니다.")
+        
+        while True:
+            self.wait10.until(EC.any_of(ec_bot_detection, ec_login_succeed, ec_login_failed))
+            
+            # BOT DETECTION
+            if self.driver.find_elements(By.XPATH, "/html/body/div[4]") != []:
+                print("Please solve the CAPTCHA Bot detection...")
+                self.wait100.until(EC.none_of(ec_bot_detection))
+            # Wrong ID / PW
+            elif self.driver.find_elements(By.CLASS_NAME, "color-red") != []:
+                print("Wrong ID or PW.")
+                raise Exception("login failed")
+            # Login Succeed
+            else:
+                break
         
         login_cookie = self.driver.get_cookie("OnlineJudge")
         print('login_cookie:', login_cookie)

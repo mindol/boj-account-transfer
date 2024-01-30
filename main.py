@@ -80,21 +80,22 @@ for idx, hist in enumerate(history):
         new_submission_id, submit_result = submitEngine.submit(language, source_code, problem_id)
         print(submit_result)
     except:
-        print('Submit failed to problem id: {}, submission id: {}', problem_id, old_submission_id)
+        print('Submit failed to problem id: {}, submission id: {}'.format(problem_id, old_submission_id))
         submit_failed_cnt += 1
         submit_failed_submissions.append({'old_submission_id': old_submission_id})
         continue
-    entry = {'old_submission_id': old_submission_id, 'new_submission_id': new_submission_id}
     
     # Check result
     check_result = checkEngine.check_result(old_submission_id, new_submission_id)
     if check_result == True:
         print('Result check finished')
         success_cnt += 1
+        entry = {'old_submission_id': old_submission_id, 'new_submission_id': new_submission_id}
         success_submissions.append(entry)
     else:
         print(check_result)
         inconsistent_cnt += 1
+        entry = {'old_submission_id': old_submission_id, 'new_submission_id': new_submission_id, 'check_result': check_result}
         inconsistent_submissions.append(entry)
 
 print('\n[3] Finished')

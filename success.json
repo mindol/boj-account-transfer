@@ -1,18 +1,1550 @@
 [
     {
+        "old_submission_id": 56892412,
+        "new_submission_id": 72647033
+    },
+    {
+        "old_submission_id": 56891804,
+        "new_submission_id": 72647062
+    },
+    {
+        "old_submission_id": 56891708,
+        "new_submission_id": 72647076
+    },
+    {
+        "old_submission_id": 56891622,
+        "new_submission_id": 72647090
+    },
+    {
+        "old_submission_id": 54530876,
+        "new_submission_id": 72647097
+    },
+    {
+        "old_submission_id": 54530855,
+        "new_submission_id": 72647119
+    },
+    {
+        "old_submission_id": 54530842,
+        "new_submission_id": 72647152
+    },
+    {
+        "old_submission_id": 54060966,
+        "new_submission_id": 72647159
+    },
+    {
+        "old_submission_id": 54058025,
+        "new_submission_id": 72647171
+    },
+    {
+        "old_submission_id": 54040333,
+        "new_submission_id": 72647186
+    },
+    {
+        "old_submission_id": 54040315,
+        "new_submission_id": 72647207
+    },
+    {
+        "old_submission_id": 54040299,
+        "new_submission_id": 72647230
+    },
+    {
+        "old_submission_id": 54040178,
+        "new_submission_id": 72647249
+    },
+    {
+        "old_submission_id": 54040130,
+        "new_submission_id": 72647267
+    },
+    {
+        "old_submission_id": 54040004,
+        "new_submission_id": 72647278
+    },
+    {
+        "old_submission_id": 54039995,
+        "new_submission_id": 72647302
+    },
+    {
+        "old_submission_id": 54039987,
+        "new_submission_id": 72647321
+    },
+    {
+        "old_submission_id": 54039841,
+        "new_submission_id": 72647337
+    },
+    {
+        "old_submission_id": 54023775,
+        "new_submission_id": 72647344
+    },
+    {
+        "old_submission_id": 54023763,
+        "new_submission_id": 72647358
+    },
+    {
         "old_submission_id": 54023744,
-        "new_submission_id": 72645241
+        "new_submission_id": 72647379
     },
     {
         "old_submission_id": 54022844,
-        "new_submission_id": 72645250
+        "new_submission_id": 72647388
     },
     {
         "old_submission_id": 54022798,
-        "new_submission_id": 72645257
+        "new_submission_id": 72647395
     },
     {
         "old_submission_id": 54016811,
-        "new_submission_id": 72645270
+        "new_submission_id": 72647401
+    },
+    {
+        "old_submission_id": 54015826,
+        "new_submission_id": 72647415
+    },
+    {
+        "old_submission_id": 54015012,
+        "new_submission_id": 72647428
+    },
+    {
+        "old_submission_id": 54011935,
+        "new_submission_id": 72647442
+    },
+    {
+        "old_submission_id": 54009181,
+        "new_submission_id": 72647453
+    },
+    {
+        "old_submission_id": 54008634,
+        "new_submission_id": 72647466
+    },
+    {
+        "old_submission_id": 53319467,
+        "new_submission_id": 72647475
+    },
+    {
+        "old_submission_id": 53316856,
+        "new_submission_id": 72647483
+    },
+    {
+        "old_submission_id": 53316749,
+        "new_submission_id": 72647493
+    },
+    {
+        "old_submission_id": 53316701,
+        "new_submission_id": 72647507
+    },
+    {
+        "old_submission_id": 53316597,
+        "new_submission_id": 72647534
+    },
+    {
+        "old_submission_id": 53316531,
+        "new_submission_id": 72647548
+    },
+    {
+        "old_submission_id": 53316515,
+        "new_submission_id": 72647557
+    },
+    {
+        "old_submission_id": 53202804,
+        "new_submission_id": 72647568
+    },
+    {
+        "old_submission_id": 53202714,
+        "new_submission_id": 72647594
+    },
+    {
+        "old_submission_id": 53202689,
+        "new_submission_id": 72647604
+    },
+    {
+        "old_submission_id": 53199899,
+        "new_submission_id": 72647617
+    },
+    {
+        "old_submission_id": 53196457,
+        "new_submission_id": 72647651
+    },
+    {
+        "old_submission_id": 53196427,
+        "new_submission_id": 72647666
+    },
+    {
+        "old_submission_id": 53194834,
+        "new_submission_id": 72647671
+    },
+    {
+        "old_submission_id": 53191518,
+        "new_submission_id": 72647709
+    },
+    {
+        "old_submission_id": 53190449,
+        "new_submission_id": 72647751
+    },
+    {
+        "old_submission_id": 53189147,
+        "new_submission_id": 72647756
+    },
+    {
+        "old_submission_id": 53187287,
+        "new_submission_id": 72647763
+    },
+    {
+        "old_submission_id": 53186783,
+        "new_submission_id": 72647810
+    },
+    {
+        "old_submission_id": 53186657,
+        "new_submission_id": 72647817
+    },
+    {
+        "old_submission_id": 53186283,
+        "new_submission_id": 72647835
+    },
+    {
+        "old_submission_id": 53155974,
+        "new_submission_id": 72647845
+    },
+    {
+        "old_submission_id": 53114556,
+        "new_submission_id": 72647858
+    },
+    {
+        "old_submission_id": 53114376,
+        "new_submission_id": 72647866
+    },
+    {
+        "old_submission_id": 53114342,
+        "new_submission_id": 72647881
+    },
+    {
+        "old_submission_id": 53114207,
+        "new_submission_id": 72647892
+    },
+    {
+        "old_submission_id": 53112943,
+        "new_submission_id": 72647903
+    },
+    {
+        "old_submission_id": 53112926,
+        "new_submission_id": 72647910
+    },
+    {
+        "old_submission_id": 53111928,
+        "new_submission_id": 72647933
+    },
+    {
+        "old_submission_id": 52926568,
+        "new_submission_id": 72647951
+    },
+    {
+        "old_submission_id": 52926533,
+        "new_submission_id": 72647963
+    },
+    {
+        "old_submission_id": 52926273,
+        "new_submission_id": 72647977
+    },
+    {
+        "old_submission_id": 52926225,
+        "new_submission_id": 72647990
+    },
+    {
+        "old_submission_id": 52926162,
+        "new_submission_id": 72648000
+    },
+    {
+        "old_submission_id": 52926115,
+        "new_submission_id": 72648004
+    },
+    {
+        "old_submission_id": 52925677,
+        "new_submission_id": 72648007
+    },
+    {
+        "old_submission_id": 52923575,
+        "new_submission_id": 72648026
+    },
+    {
+        "old_submission_id": 52912031,
+        "new_submission_id": 72648046
+    },
+    {
+        "old_submission_id": 52911993,
+        "new_submission_id": 72648057
+    },
+    {
+        "old_submission_id": 52911980,
+        "new_submission_id": 72648070
+    },
+    {
+        "old_submission_id": 52903942,
+        "new_submission_id": 72648086
+    },
+    {
+        "old_submission_id": 52902516,
+        "new_submission_id": 72648097
+    },
+    {
+        "old_submission_id": 52577565,
+        "new_submission_id": 72648108
+    },
+    {
+        "old_submission_id": 52577423,
+        "new_submission_id": 72648120
+    },
+    {
+        "old_submission_id": 52577378,
+        "new_submission_id": 72648140
+    },
+    {
+        "old_submission_id": 52577283,
+        "new_submission_id": 72648152
+    },
+    {
+        "old_submission_id": 52569386,
+        "new_submission_id": 72648163
+    },
+    {
+        "old_submission_id": 52568113,
+        "new_submission_id": 72648190
+    },
+    {
+        "old_submission_id": 52567276,
+        "new_submission_id": 72648205
+    },
+    {
+        "old_submission_id": 52504466,
+        "new_submission_id": 72648216
+    },
+    {
+        "old_submission_id": 52504406,
+        "new_submission_id": 72648224
+    },
+    {
+        "old_submission_id": 52504340,
+        "new_submission_id": 72648232
+    },
+    {
+        "old_submission_id": 52476162,
+        "new_submission_id": 72648239
+    },
+    {
+        "old_submission_id": 52475942,
+        "new_submission_id": 72648251
+    },
+    {
+        "old_submission_id": 52475872,
+        "new_submission_id": 72648257
+    },
+    {
+        "old_submission_id": 52475838,
+        "new_submission_id": 72648265
+    },
+    {
+        "old_submission_id": 52475832,
+        "new_submission_id": 72648275
+    },
+    {
+        "old_submission_id": 52475796,
+        "new_submission_id": 72648286
+    },
+    {
+        "old_submission_id": 52475709,
+        "new_submission_id": 72648298
+    },
+    {
+        "old_submission_id": 52475685,
+        "new_submission_id": 72648305
+    },
+    {
+        "old_submission_id": 52475679,
+        "new_submission_id": 72648310
+    },
+    {
+        "old_submission_id": 52475588,
+        "new_submission_id": 72648318
+    },
+    {
+        "old_submission_id": 52475564,
+        "new_submission_id": 72648328
+    },
+    {
+        "old_submission_id": 52475554,
+        "new_submission_id": 72648333
+    },
+    {
+        "old_submission_id": 52475542,
+        "new_submission_id": 72648342
+    },
+    {
+        "old_submission_id": 52475482,
+        "new_submission_id": 72648349
+    },
+    {
+        "old_submission_id": 52475335,
+        "new_submission_id": 72648356
+    },
+    {
+        "old_submission_id": 52475268,
+        "new_submission_id": 72648365
+    },
+    {
+        "old_submission_id": 52474641,
+        "new_submission_id": 72648380
+    },
+    {
+        "old_submission_id": 52473776,
+        "new_submission_id": 72648392
+    },
+    {
+        "old_submission_id": 52473770,
+        "new_submission_id": 72648400
+    },
+    {
+        "old_submission_id": 52473763,
+        "new_submission_id": 72648405
+    },
+    {
+        "old_submission_id": 52473705,
+        "new_submission_id": 72648411
+    },
+    {
+        "old_submission_id": 52473365,
+        "new_submission_id": 72648423
+    },
+    {
+        "old_submission_id": 52473138,
+        "new_submission_id": 72648429
+    },
+    {
+        "old_submission_id": 52472855,
+        "new_submission_id": 72648437
+    },
+    {
+        "old_submission_id": 52472670,
+        "new_submission_id": 72648446
+    },
+    {
+        "old_submission_id": 52467569,
+        "new_submission_id": 72648453
+    },
+    {
+        "old_submission_id": 52467506,
+        "new_submission_id": 72648458
+    },
+    {
+        "old_submission_id": 52466960,
+        "new_submission_id": 72648473
+    },
+    {
+        "old_submission_id": 52466920,
+        "new_submission_id": 72648483
+    },
+    {
+        "old_submission_id": 52466513,
+        "new_submission_id": 72648495
+    },
+    {
+        "old_submission_id": 52281920,
+        "new_submission_id": 72648504
+    },
+    {
+        "old_submission_id": 52281716,
+        "new_submission_id": 72648513
+    },
+    {
+        "old_submission_id": 52281227,
+        "new_submission_id": 72648525
+    },
+    {
+        "old_submission_id": 52280839,
+        "new_submission_id": 72648534
+    },
+    {
+        "old_submission_id": 52280659,
+        "new_submission_id": 72648538
+    },
+    {
+        "old_submission_id": 52272232,
+        "new_submission_id": 72648543
+    },
+    {
+        "old_submission_id": 52272201,
+        "new_submission_id": 72648548
+    },
+    {
+        "old_submission_id": 52271431,
+        "new_submission_id": 72648552
+    },
+    {
+        "old_submission_id": 52270888,
+        "new_submission_id": 72648562
+    },
+    {
+        "old_submission_id": 52043306,
+        "new_submission_id": 72648573
+    },
+    {
+        "old_submission_id": 52043104,
+        "new_submission_id": 72648582
+    },
+    {
+        "old_submission_id": 52042937,
+        "new_submission_id": 72648590
+    },
+    {
+        "old_submission_id": 52042765,
+        "new_submission_id": 72648614
+    },
+    {
+        "old_submission_id": 52032497,
+        "new_submission_id": 72648625
+    },
+    {
+        "old_submission_id": 52030710,
+        "new_submission_id": 72648632
+    },
+    {
+        "old_submission_id": 52029843,
+        "new_submission_id": 72648638
+    },
+    {
+        "old_submission_id": 51747206,
+        "new_submission_id": 72648646
+    },
+    {
+        "old_submission_id": 51747175,
+        "new_submission_id": 72648652
+    },
+    {
+        "old_submission_id": 51746225,
+        "new_submission_id": 72648659
+    },
+    {
+        "old_submission_id": 51746155,
+        "new_submission_id": 72648687
+    },
+    {
+        "old_submission_id": 51746056,
+        "new_submission_id": 72648705
+    },
+    {
+        "old_submission_id": 51745641,
+        "new_submission_id": 72648728
+    },
+    {
+        "old_submission_id": 51008183,
+        "new_submission_id": 72648741
+    },
+    {
+        "old_submission_id": 51007623,
+        "new_submission_id": 72648745
+    },
+    {
+        "old_submission_id": 51006940,
+        "new_submission_id": 72648751
+    },
+    {
+        "old_submission_id": 51006204,
+        "new_submission_id": 72648756
+    },
+    {
+        "old_submission_id": 51005581,
+        "new_submission_id": 72648761
+    },
+    {
+        "old_submission_id": 51005525,
+        "new_submission_id": 72648766
+    },
+    {
+        "old_submission_id": 51004431,
+        "new_submission_id": 72648772
+    },
+    {
+        "old_submission_id": 50725356,
+        "new_submission_id": 72648780
+    },
+    {
+        "old_submission_id": 50725342,
+        "new_submission_id": 72648795
+    },
+    {
+        "old_submission_id": 50724177,
+        "new_submission_id": 72648815
+    },
+    {
+        "old_submission_id": 50722090,
+        "new_submission_id": 72648827
+    },
+    {
+        "old_submission_id": 50722002,
+        "new_submission_id": 72648839
+    },
+    {
+        "old_submission_id": 50464615,
+        "new_submission_id": 72648842
+    },
+    {
+        "old_submission_id": 50462828,
+        "new_submission_id": 72648848
+    },
+    {
+        "old_submission_id": 50460892,
+        "new_submission_id": 72648855
+    },
+    {
+        "old_submission_id": 50459499,
+        "new_submission_id": 72648866
+    },
+    {
+        "old_submission_id": 50457935,
+        "new_submission_id": 72648884
+    },
+    {
+        "old_submission_id": 50137406,
+        "new_submission_id": 72648894
+    },
+    {
+        "old_submission_id": 50136271,
+        "new_submission_id": 72648903
+    },
+    {
+        "old_submission_id": 50135804,
+        "new_submission_id": 72648913
+    },
+    {
+        "old_submission_id": 50135678,
+        "new_submission_id": 72648919
+    },
+    {
+        "old_submission_id": 50135451,
+        "new_submission_id": 72648926
+    },
+    {
+        "old_submission_id": 50133746,
+        "new_submission_id": 72648932
+    },
+    {
+        "old_submission_id": 50133654,
+        "new_submission_id": 72648961
+    },
+    {
+        "old_submission_id": 50133611,
+        "new_submission_id": 72648988
+    },
+    {
+        "old_submission_id": 50132770,
+        "new_submission_id": 72649005
+    },
+    {
+        "old_submission_id": 50132484,
+        "new_submission_id": 72649017
+    },
+    {
+        "old_submission_id": 50131138,
+        "new_submission_id": 72649025
+    },
+    {
+        "old_submission_id": 50130907,
+        "new_submission_id": 72649035
+    },
+    {
+        "old_submission_id": 50130276,
+        "new_submission_id": 72649054
+    },
+    {
+        "old_submission_id": 50130268,
+        "new_submission_id": 72649068
+    },
+    {
+        "old_submission_id": 50129896,
+        "new_submission_id": 72649075
+    },
+    {
+        "old_submission_id": 50027247,
+        "new_submission_id": 72649083
+    },
+    {
+        "old_submission_id": 50026468,
+        "new_submission_id": 72649116
+    },
+    {
+        "old_submission_id": 49505766,
+        "new_submission_id": 72649151
+    },
+    {
+        "old_submission_id": 49493367,
+        "new_submission_id": 72649161
+    },
+    {
+        "old_submission_id": 49492846,
+        "new_submission_id": 72649170
+    },
+    {
+        "old_submission_id": 49492689,
+        "new_submission_id": 72649180
+    },
+    {
+        "old_submission_id": 49492619,
+        "new_submission_id": 72649189
+    },
+    {
+        "old_submission_id": 49492518,
+        "new_submission_id": 72649200
+    },
+    {
+        "old_submission_id": 49492474,
+        "new_submission_id": 72649208
+    },
+    {
+        "old_submission_id": 49490932,
+        "new_submission_id": 72649223
+    },
+    {
+        "old_submission_id": 49490875,
+        "new_submission_id": 72649236
+    },
+    {
+        "old_submission_id": 49490619,
+        "new_submission_id": 72649241
+    },
+    {
+        "old_submission_id": 49490453,
+        "new_submission_id": 72649248
+    },
+    {
+        "old_submission_id": 49349448,
+        "new_submission_id": 72649254
+    },
+    {
+        "old_submission_id": 49195158,
+        "new_submission_id": 72649262
+    },
+    {
+        "old_submission_id": 49194109,
+        "new_submission_id": 72649270
+    },
+    {
+        "old_submission_id": 49157230,
+        "new_submission_id": 72649275
+    },
+    {
+        "old_submission_id": 49157181,
+        "new_submission_id": 72649283
+    },
+    {
+        "old_submission_id": 49157028,
+        "new_submission_id": 72649288
+    },
+    {
+        "old_submission_id": 49154098,
+        "new_submission_id": 72649297
+    },
+    {
+        "old_submission_id": 49153754,
+        "new_submission_id": 72649308
+    },
+    {
+        "old_submission_id": 49153357,
+        "new_submission_id": 72649315
+    },
+    {
+        "old_submission_id": 38021988,
+        "new_submission_id": 72649319
+    },
+    {
+        "old_submission_id": 38021186,
+        "new_submission_id": 72649330
+    },
+    {
+        "old_submission_id": 38019810,
+        "new_submission_id": 72649335
+    },
+    {
+        "old_submission_id": 38019795,
+        "new_submission_id": 72649340
+    },
+    {
+        "old_submission_id": 38019143,
+        "new_submission_id": 72649347
+    },
+    {
+        "old_submission_id": 37767174,
+        "new_submission_id": 72649367
+    },
+    {
+        "old_submission_id": 37766987,
+        "new_submission_id": 72649387
+    },
+    {
+        "old_submission_id": 37766904,
+        "new_submission_id": 72649408
+    },
+    {
+        "old_submission_id": 37757784,
+        "new_submission_id": 72649428
+    },
+    {
+        "old_submission_id": 37713270,
+        "new_submission_id": 72649441
+    },
+    {
+        "old_submission_id": 37713078,
+        "new_submission_id": 72649476
+    },
+    {
+        "old_submission_id": 37712976,
+        "new_submission_id": 72649491
+    },
+    {
+        "old_submission_id": 37711873,
+        "new_submission_id": 72649502
+    },
+    {
+        "old_submission_id": 37711595,
+        "new_submission_id": 72649510
+    },
+    {
+        "old_submission_id": 37711243,
+        "new_submission_id": 72649518
+    },
+    {
+        "old_submission_id": 37710135,
+        "new_submission_id": 72649531
+    },
+    {
+        "old_submission_id": 37405711,
+        "new_submission_id": 72649543
+    },
+    {
+        "old_submission_id": 37356878,
+        "new_submission_id": 72649561
+    },
+    {
+        "old_submission_id": 37356665,
+        "new_submission_id": 72649568
+    },
+    {
+        "old_submission_id": 37355628,
+        "new_submission_id": 72649572
+    },
+    {
+        "old_submission_id": 37355562,
+        "new_submission_id": 72649578
+    },
+    {
+        "old_submission_id": 37281752,
+        "new_submission_id": 72649587
+    },
+    {
+        "old_submission_id": 37281712,
+        "new_submission_id": 72649593
+    },
+    {
+        "old_submission_id": 37242951,
+        "new_submission_id": 72649600
+    },
+    {
+        "old_submission_id": 37242938,
+        "new_submission_id": 72649606
+    },
+    {
+        "old_submission_id": 37242095,
+        "new_submission_id": 72649616
+    },
+    {
+        "old_submission_id": 37241704,
+        "new_submission_id": 72649626
+    },
+    {
+        "old_submission_id": 37229217,
+        "new_submission_id": 72649635
+    },
+    {
+        "old_submission_id": 24077879,
+        "new_submission_id": 72649646
+    },
+    {
+        "old_submission_id": 24077733,
+        "new_submission_id": 72649657
+    },
+    {
+        "old_submission_id": 24074217,
+        "new_submission_id": 72649668
+    },
+    {
+        "old_submission_id": 24074209,
+        "new_submission_id": 72649681
+    },
+    {
+        "old_submission_id": 24073947,
+        "new_submission_id": 72649697
+    },
+    {
+        "old_submission_id": 24073758,
+        "new_submission_id": 72649706
+    },
+    {
+        "old_submission_id": 24073733,
+        "new_submission_id": 72649716
+    },
+    {
+        "old_submission_id": 24073731,
+        "new_submission_id": 72649745
+    },
+    {
+        "old_submission_id": 24073693,
+        "new_submission_id": 72649749
+    },
+    {
+        "old_submission_id": 24073691,
+        "new_submission_id": 72649781
+    },
+    {
+        "old_submission_id": 24073392,
+        "new_submission_id": 72649789
+    },
+    {
+        "old_submission_id": 23812787,
+        "new_submission_id": 72649810
+    },
+    {
+        "old_submission_id": 23812716,
+        "new_submission_id": 72649920
+    },
+    {
+        "old_submission_id": 23812693,
+        "new_submission_id": 72650016
+    },
+    {
+        "old_submission_id": 23812678,
+        "new_submission_id": 72650105
+    },
+    {
+        "old_submission_id": 23812414,
+        "new_submission_id": 72650206
+    },
+    {
+        "old_submission_id": 23812309,
+        "new_submission_id": 72650256
+    },
+    {
+        "old_submission_id": 23811300,
+        "new_submission_id": 72650265
+    },
+    {
+        "old_submission_id": 23811245,
+        "new_submission_id": 72650292
+    },
+    {
+        "old_submission_id": 23810827,
+        "new_submission_id": 72650332
+    },
+    {
+        "old_submission_id": 23810759,
+        "new_submission_id": 72650357
+    },
+    {
+        "old_submission_id": 23700532,
+        "new_submission_id": 72650405
+    },
+    {
+        "old_submission_id": 23700509,
+        "new_submission_id": 72650424
+    },
+    {
+        "old_submission_id": 23700504,
+        "new_submission_id": 72650435
+    },
+    {
+        "old_submission_id": 23700475,
+        "new_submission_id": 72650444
+    },
+    {
+        "old_submission_id": 23696559,
+        "new_submission_id": 72650467
+    },
+    {
+        "old_submission_id": 23681078,
+        "new_submission_id": 72650472
+    },
+    {
+        "old_submission_id": 23681059,
+        "new_submission_id": 72650499
+    },
+    {
+        "old_submission_id": 23681056,
+        "new_submission_id": 72650514
+    },
+    {
+        "old_submission_id": 23681052,
+        "new_submission_id": 72650535
+    },
+    {
+        "old_submission_id": 23681046,
+        "new_submission_id": 72650547
+    },
+    {
+        "old_submission_id": 23681043,
+        "new_submission_id": 72650553
+    },
+    {
+        "old_submission_id": 23677385,
+        "new_submission_id": 72650561
+    },
+    {
+        "old_submission_id": 23677372,
+        "new_submission_id": 72650581
+    },
+    {
+        "old_submission_id": 23677331,
+        "new_submission_id": 72650646
+    },
+    {
+        "old_submission_id": 23674984,
+        "new_submission_id": 72650734
+    },
+    {
+        "old_submission_id": 23672905,
+        "new_submission_id": 72650782
+    },
+    {
+        "old_submission_id": 23546524,
+        "new_submission_id": 72650875
+    },
+    {
+        "old_submission_id": 23546395,
+        "new_submission_id": 72650887
+    },
+    {
+        "old_submission_id": 23546356,
+        "new_submission_id": 72650906
+    },
+    {
+        "old_submission_id": 23546351,
+        "new_submission_id": 72650912
+    },
+    {
+        "old_submission_id": 23546302,
+        "new_submission_id": 72650919
+    },
+    {
+        "old_submission_id": 23546277,
+        "new_submission_id": 72650933
+    },
+    {
+        "old_submission_id": 23546176,
+        "new_submission_id": 72650946
+    },
+    {
+        "old_submission_id": 23545757,
+        "new_submission_id": 72650957
+    },
+    {
+        "old_submission_id": 23545746,
+        "new_submission_id": 72650973
+    },
+    {
+        "old_submission_id": 23449128,
+        "new_submission_id": 72650988
+    },
+    {
+        "old_submission_id": 23431826,
+        "new_submission_id": 72650999
+    },
+    {
+        "old_submission_id": 23431616,
+        "new_submission_id": 72651009
+    },
+    {
+        "old_submission_id": 23431556,
+        "new_submission_id": 72651015
+    },
+    {
+        "old_submission_id": 23431404,
+        "new_submission_id": 72651026
+    },
+    {
+        "old_submission_id": 23431398,
+        "new_submission_id": 72651031
+    },
+    {
+        "old_submission_id": 23431260,
+        "new_submission_id": 72651034
+    },
+    {
+        "old_submission_id": 23430623,
+        "new_submission_id": 72651037
+    },
+    {
+        "old_submission_id": 23430619,
+        "new_submission_id": 72651055
+    },
+    {
+        "old_submission_id": 23392420,
+        "new_submission_id": 72651063
+    },
+    {
+        "old_submission_id": 23391948,
+        "new_submission_id": 72651070
+    },
+    {
+        "old_submission_id": 23391745,
+        "new_submission_id": 72651091
+    },
+    {
+        "old_submission_id": 23111373,
+        "new_submission_id": 72651105
+    },
+    {
+        "old_submission_id": 23111368,
+        "new_submission_id": 72651146
+    },
+    {
+        "old_submission_id": 23111256,
+        "new_submission_id": 72651151
+    },
+    {
+        "old_submission_id": 23110777,
+        "new_submission_id": 72651171
+    },
+    {
+        "old_submission_id": 23039130,
+        "new_submission_id": 72651184
+    },
+    {
+        "old_submission_id": 22956923,
+        "new_submission_id": 72651197
+    },
+    {
+        "old_submission_id": 22956764,
+        "new_submission_id": 72651205
+    },
+    {
+        "old_submission_id": 22956705,
+        "new_submission_id": 72651214
+    },
+    {
+        "old_submission_id": 22956102,
+        "new_submission_id": 72651232
+    },
+    {
+        "old_submission_id": 22843743,
+        "new_submission_id": 72651252
+    },
+    {
+        "old_submission_id": 22842776,
+        "new_submission_id": 72651272
+    },
+    {
+        "old_submission_id": 22842575,
+        "new_submission_id": 72651279
+    },
+    {
+        "old_submission_id": 22842402,
+        "new_submission_id": 72651289
+    },
+    {
+        "old_submission_id": 22842120,
+        "new_submission_id": 72651297
+    },
+    {
+        "old_submission_id": 22076814,
+        "new_submission_id": 72651312
+    },
+    {
+        "old_submission_id": 22072841,
+        "new_submission_id": 72651318
+    },
+    {
+        "old_submission_id": 22071722,
+        "new_submission_id": 72651323
+    },
+    {
+        "old_submission_id": 22071700,
+        "new_submission_id": 72651338
+    },
+    {
+        "old_submission_id": 22059936,
+        "new_submission_id": 72651356
+    },
+    {
+        "old_submission_id": 22059721,
+        "new_submission_id": 72651378
+    },
+    {
+        "old_submission_id": 22026489,
+        "new_submission_id": 72651414
+    },
+    {
+        "old_submission_id": 21642369,
+        "new_submission_id": 72651427
+    },
+    {
+        "old_submission_id": 21488383,
+        "new_submission_id": 72651436
+    },
+    {
+        "old_submission_id": 21488337,
+        "new_submission_id": 72651457
+    },
+    {
+        "old_submission_id": 21488259,
+        "new_submission_id": 72651498
+    },
+    {
+        "old_submission_id": 21488251,
+        "new_submission_id": 72651508
+    },
+    {
+        "old_submission_id": 21488246,
+        "new_submission_id": 72651534
+    },
+    {
+        "old_submission_id": 21488232,
+        "new_submission_id": 72651542
+    },
+    {
+        "old_submission_id": 21488230,
+        "new_submission_id": 72651569
+    },
+    {
+        "old_submission_id": 21487682,
+        "new_submission_id": 72651587
+    },
+    {
+        "old_submission_id": 21435308,
+        "new_submission_id": 72651599
+    },
+    {
+        "old_submission_id": 21435287,
+        "new_submission_id": 72651622
+    },
+    {
+        "old_submission_id": 21252631,
+        "new_submission_id": 72651721
+    },
+    {
+        "old_submission_id": 21163031,
+        "new_submission_id": 72651752
+    },
+    {
+        "old_submission_id": 21161435,
+        "new_submission_id": 72651759
+    },
+    {
+        "old_submission_id": 21160566,
+        "new_submission_id": 72651769
+    },
+    {
+        "old_submission_id": 21160264,
+        "new_submission_id": 72651773
+    },
+    {
+        "old_submission_id": 21155176,
+        "new_submission_id": 72651778
+    },
+    {
+        "old_submission_id": 21155153,
+        "new_submission_id": 72651792
+    },
+    {
+        "old_submission_id": 21155142,
+        "new_submission_id": 72651798
+    },
+    {
+        "old_submission_id": 21154999,
+        "new_submission_id": 72651806
+    },
+    {
+        "old_submission_id": 21154943,
+        "new_submission_id": 72651813
+    },
+    {
+        "old_submission_id": 21154928,
+        "new_submission_id": 72651827
+    },
+    {
+        "old_submission_id": 21154773,
+        "new_submission_id": 72651830
+    },
+    {
+        "old_submission_id": 21154355,
+        "new_submission_id": 72651842
+    },
+    {
+        "old_submission_id": 21154013,
+        "new_submission_id": 72651852
+    },
+    {
+        "old_submission_id": 21153967,
+        "new_submission_id": 72651871
+    },
+    {
+        "old_submission_id": 21153911,
+        "new_submission_id": 72651915
+    },
+    {
+        "old_submission_id": 21153034,
+        "new_submission_id": 72651930
+    },
+    {
+        "old_submission_id": 21152966,
+        "new_submission_id": 72651944
+    },
+    {
+        "old_submission_id": 21125017,
+        "new_submission_id": 72651951
+    },
+    {
+        "old_submission_id": 21123983,
+        "new_submission_id": 72651957
+    },
+    {
+        "old_submission_id": 21123751,
+        "new_submission_id": 72651965
+    },
+    {
+        "old_submission_id": 21123678,
+        "new_submission_id": 72651972
+    },
+    {
+        "old_submission_id": 21123526,
+        "new_submission_id": 72651982
+    },
+    {
+        "old_submission_id": 21118818,
+        "new_submission_id": 72651996
+    },
+    {
+        "old_submission_id": 21118622,
+        "new_submission_id": 72652006
+    },
+    {
+        "old_submission_id": 21118161,
+        "new_submission_id": 72652019
+    },
+    {
+        "old_submission_id": 21118140,
+        "new_submission_id": 72652037
+    },
+    {
+        "old_submission_id": 21118098,
+        "new_submission_id": 72652052
+    },
+    {
+        "old_submission_id": 21118057,
+        "new_submission_id": 72652063
+    },
+    {
+        "old_submission_id": 21118027,
+        "new_submission_id": 72652080
+    },
+    {
+        "old_submission_id": 21116360,
+        "new_submission_id": 72652089
+    },
+    {
+        "old_submission_id": 21116343,
+        "new_submission_id": 72652100
+    },
+    {
+        "old_submission_id": 21116082,
+        "new_submission_id": 72652112
+    },
+    {
+        "old_submission_id": 21116060,
+        "new_submission_id": 72652122
+    },
+    {
+        "old_submission_id": 21116011,
+        "new_submission_id": 72652128
+    },
+    {
+        "old_submission_id": 21115929,
+        "new_submission_id": 72652134
+    },
+    {
+        "old_submission_id": 21109509,
+        "new_submission_id": 72652140
+    },
+    {
+        "old_submission_id": 21108367,
+        "new_submission_id": 72652154
+    },
+    {
+        "old_submission_id": 21095238,
+        "new_submission_id": 72652163
+    },
+    {
+        "old_submission_id": 21094667,
+        "new_submission_id": 72652183
+    },
+    {
+        "old_submission_id": 21094660,
+        "new_submission_id": 72652197
+    },
+    {
+        "old_submission_id": 21074993,
+        "new_submission_id": 72652205
+    },
+    {
+        "old_submission_id": 21074991,
+        "new_submission_id": 72652211
+    },
+    {
+        "old_submission_id": 20878250,
+        "new_submission_id": 72652246
+    },
+    {
+        "old_submission_id": 20868033,
+        "new_submission_id": 72652251
+    },
+    {
+        "old_submission_id": 20868024,
+        "new_submission_id": 72652256
+    },
+    {
+        "old_submission_id": 20867901,
+        "new_submission_id": 72652260
+    },
+    {
+        "old_submission_id": 20867895,
+        "new_submission_id": 72652265
+    },
+    {
+        "old_submission_id": 20866595,
+        "new_submission_id": 72652273
+    },
+    {
+        "old_submission_id": 20866498,
+        "new_submission_id": 72652281
+    },
+    {
+        "old_submission_id": 20866424,
+        "new_submission_id": 72652289
+    },
+    {
+        "old_submission_id": 20866415,
+        "new_submission_id": 72652300
+    },
+    {
+        "old_submission_id": 20857342,
+        "new_submission_id": 72652311
+    },
+    {
+        "old_submission_id": 20853122,
+        "new_submission_id": 72652322
+    },
+    {
+        "old_submission_id": 20851850,
+        "new_submission_id": 72652330
+    },
+    {
+        "old_submission_id": 20845900,
+        "new_submission_id": 72652343
+    },
+    {
+        "old_submission_id": 20845585,
+        "new_submission_id": 72652348
+    },
+    {
+        "old_submission_id": 20845420,
+        "new_submission_id": 72652358
+    },
+    {
+        "old_submission_id": 20845323,
+        "new_submission_id": 72652366
+    },
+    {
+        "old_submission_id": 20845190,
+        "new_submission_id": 72652373
+    },
+    {
+        "old_submission_id": 20843541,
+        "new_submission_id": 72652377
+    },
+    {
+        "old_submission_id": 20811706,
+        "new_submission_id": 72652382
+    },
+    {
+        "old_submission_id": 20806545,
+        "new_submission_id": 72652391
+    },
+    {
+        "old_submission_id": 20806374,
+        "new_submission_id": 72652396
+    },
+    {
+        "old_submission_id": 20801751,
+        "new_submission_id": 72652400
+    },
+    {
+        "old_submission_id": 20801719,
+        "new_submission_id": 72652415
+    },
+    {
+        "old_submission_id": 20781505,
+        "new_submission_id": 72652420
+    },
+    {
+        "old_submission_id": 20780568,
+        "new_submission_id": 72652426
+    },
+    {
+        "old_submission_id": 20780505,
+        "new_submission_id": 72652432
+    },
+    {
+        "old_submission_id": 20761907,
+        "new_submission_id": 72652441
+    },
+    {
+        "old_submission_id": 20761804,
+        "new_submission_id": 72652443
+    },
+    {
+        "old_submission_id": 20761769,
+        "new_submission_id": 72652450
+    },
+    {
+        "old_submission_id": 20761570,
+        "new_submission_id": 72652455
+    },
+    {
+        "old_submission_id": 18960058,
+        "new_submission_id": 72652467
+    },
+    {
+        "old_submission_id": 18845414,
+        "new_submission_id": 72652474
+    },
+    {
+        "old_submission_id": 18844062,
+        "new_submission_id": 72652479
+    },
+    {
+        "old_submission_id": 18843904,
+        "new_submission_id": 72652484
+    },
+    {
+        "old_submission_id": 18843885,
+        "new_submission_id": 72652486
+    },
+    {
+        "old_submission_id": 18841228,
+        "new_submission_id": 72652492
+    },
+    {
+        "old_submission_id": 18708170,
+        "new_submission_id": 72652496
+    },
+    {
+        "old_submission_id": 18680262,
+        "new_submission_id": 72652512
+    },
+    {
+        "old_submission_id": 18680255,
+        "new_submission_id": 72652519
     }
 ]

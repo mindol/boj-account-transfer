@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class Check_Result:
-    def __init__(self, headless = False):
+    def __init__(self, headless = True):
         if headless:
             options = webdriver.ChromeOptions()
             options.add_argument("headless")

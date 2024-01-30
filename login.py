@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class Login:
-    def __init__(self, headless = True):
+    def __init__(self, headless = False):
         if headless:
             options = webdriver.ChromeOptions()
             options.add_argument("headless")
@@ -53,3 +53,6 @@ class Login:
         print('login_cookie:', login_cookie)
         
         return login_cookie
+    
+    def quit(self):
+        self.driver.quit()

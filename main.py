@@ -2,6 +2,7 @@ from login import Login
 from getpass import getpass
 from search import Search
 from source import Source
+from submit import Submit
 
 ############ LOGIN ############
 loginObject = Login()
@@ -14,6 +15,7 @@ new_id = input("[0-2] Input new id: ")
 new_password = getpass("[0-2] Input password: ")
 new_cookie = loginObject.login(new_id, new_password)
 print("Login Succeeded!\n")
+loginObject.quit()
 
 ############ SEARCH ############
 while True:
@@ -33,6 +35,7 @@ while True:
                 continue
             searchEngine = Search()
             history = searchEngine.load_from_web(old_id, a, b)
+        searchEngine.save_to_file(history)
         break
     elif ans == 'N' or ans == 'n':
         prompt = """[1-1] Please enter the saved JSON file name:
@@ -47,7 +50,14 @@ while True:
 
 ############ MAIN LOOP ############
 # sourceEngine = Source()
+# submitEngine = Submit(new_cookie)
 # for hist in history:
 #    old_submission_id, problem_id, old_result, language =\
 #        hist['submission_id'], hist['problem_id'], hist['result'], hist['language']
+        
+#    source_code = sourceEngine.get_source(old_cookie, old_submission_id)
+#    res = submitEngine.submit(language, source_code, problem_id)
+    
+    
+    
     

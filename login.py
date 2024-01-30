@@ -14,6 +14,8 @@ class Login:
         self.wait10 = WebDriverWait(self.driver, 10)
 
     def login(self, user_id, password):
+        self.driver.delete_all_cookies()
+        
         login_url = "https://www.acmicpc.net/login"
         self.driver.get(login_url)
 
@@ -32,5 +34,4 @@ class Login:
         login_cookie = self.driver.get_cookie("OnlineJudge")
         print('login_cookie:', login_cookie)
         
-        self.driver.quit()
         return login_cookie

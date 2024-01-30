@@ -57,7 +57,7 @@ class Search:
                     finished = True
                     break
                     
-                found.append({"submission_id": submission_id, "problem_id": problem_id, "result": result, "langauge": language})
+                found.append({"submission_id": submission_id, "problem_id": problem_id, "result": result, "language": language})
             
             history += found
             print("found: {}~{}({} submissions), now total: {} submissions".format(

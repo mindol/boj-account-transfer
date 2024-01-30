@@ -3,6 +3,8 @@ from getpass import getpass
 from search import Search
 from source import Source
 from submit import Submit
+from check_result import Check_Result
+import json
 
 ############ LOGIN ############
 loginObject = Login()
@@ -49,15 +51,65 @@ while True:
         break
 
 ############ MAIN LOOP ############
-# sourceEngine = Source()
-# submitEngine = Submit(new_cookie)
-# for hist in history:
-#    old_submission_id, problem_id, old_result, language =\
-#        hist['submission_id'], hist['problem_id'], hist['result'], hist['language']
-        
-#    source_code = sourceEngine.get_source(old_cookie, old_submission_id)
-#    res = submitEngine.submit(language, source_code, problem_id)
+sourceEngine = Source()
+submitEngine = Submit(new_cookie)
+checkEngine = Check_Result()
+
+total = len(history)
+success_cnt = 0
+success_submissions = []
+submit_failed_cnt = 0
+submit_failed_submissions = []
+inconsistent_cnt = 0
+inconsistent_submissions = []
+
+for idx, hist in enumerate(history):
+    old_submission_id, problem_id, old_result, language =\
+        hist['submission_id'], hist['problem_id'], hist['result'], hist['language']
     
+    # Current Stat
+    print("[2 - Current Stats] {} Success, {} Submit fails, {} Inconsistent results, {} left"\
+        .format(success_cnt, submit_failed_cnt, inconsistent_cnt, total - idx))
+    print("[{}/{}] Transferring submission id: {}, problem id: {}".format(idx, total, old_submission_id, problem_id))
+    
+    # Get source code
+    source_code = sourceEngine.get_source(old_cookie, old_submission_id)
+    
+    # Submit
+    try:
+        new_submission_id, submit_result = submitEngine.submit(language, source_code, problem_id)
+        print(submit_result)
+    except:
+        print('Submit failed to problem id: {}, submission id: {}', problem_id, old_submission_id)
+        submit_failed_cnt += 1
+        submit_failed_submissions.append({'old_submission_id': old_submission_id})
+        continue
+    entry = {'old_submission_id': old_submission_id, 'new_submission_id': new_submission_id}
+    
+    # Check result
+    check_result = checkEngine.check_result(old_submission_id, new_submission_id)
+    if check_result == True:
+        print('Result check finished')
+        success_cnt += 1
+        success_submissions.append(entry)
+    else:
+        print(check_result)
+        inconsistent_cnt += 1
+        inconsistent_submissions.append(entry)
+
+print('\n[3] Finished')
+print("Total {} Trials => {} Success, {} Submit fails, {} Inconsistent results"\
+        .format(total, success_cnt, submit_failed_cnt, inconsistent_cnt))
+
+def save(submissions, filename):
+    with open(filename, "w", encoding = 'utf-8') as f:
+        json.dump(submissions, f, ensure_ascii = False, indent = 4)
+
+save(success_submissions, "success.json")
+save(submit_failed_submissions, "failed.json")
+save(inconsistent_submissions, "inconsistent.json")
+print("Submission pairs saved to: 'success.json' / 'failed.json' / 'inconsistent.json'")
+
     
     
     

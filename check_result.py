@@ -19,7 +19,7 @@ class Check_Result:
         Do not call this function outside.
         This function WAITS until the submission's result comes out.
         """
-        desired_url = self.status_url + submission_id
+        desired_url = self.status_url + str(submission_id)
         self.driver.get(desired_url)
 
         table = self.driver.find_element(By.ID, "status-table")
@@ -32,7 +32,7 @@ class Check_Result:
         entry = entries[0]
         elems = entry.find_elements(By.TAG_NAME, "td")
 
-        submission_wid = elems[0].text
+        submission_wid = int(elems[0].text)
         assert(submission_id == submission_wid)
 
         problem_id = int(elems[2].text)

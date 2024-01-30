@@ -73,7 +73,7 @@ class Search:
         return history
         
 
-searchEngine = Search()
-history = searchEngine.load_from_web("povwhm", 0, 0)
-searchEngine.save_to_file(history)
-history = searchEngine.load_from_file()
+# searchEngine = Search()
+# history = searchEngine.load_from_web("povwhm", 0, 0)
+# searchEngine.save_to_file(history)
+# history = searchEngine.load_from_file()

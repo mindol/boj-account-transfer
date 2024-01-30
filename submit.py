@@ -89,7 +89,6 @@ class Submit:
         # [Step 2-4] Click submit button
         self.driver.find_element(By.ID, "submit_button").click()
         
-        time.sleep(5)
         return "submitted to problem id: {}".format(problem_id)
     
     def get_result(self, submission_id):

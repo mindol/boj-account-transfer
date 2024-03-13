@@ -70,7 +70,7 @@ class Search:
             
         print("Finish loading submission history from BOJ website.")
         self.driver.quit()
-        return history
+        return history.reverse()
         
 
 # searchEngine = Search()
